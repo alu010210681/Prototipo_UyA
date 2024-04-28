@@ -3,7 +3,7 @@ name: Despliegue de Página Web
 on:
   push:
     branches:
-      - main  # Cambia esto según la rama en la que deseas desplegar
+      - main
 
 jobs:
   build:
@@ -14,4 +14,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./es  
+          publish_dir: ./es
