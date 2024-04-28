@@ -10,22 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v2
-
-      - name: Configura Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # Cambia la versión de Node.js según tus necesidades
-
-      - name: Instala dependencias
-        run: npm install
-
-      - name: Compila tu sitio web
-        run: npm run build  # Ajusta este comando según tu proyecto
-
       - name: Despliega en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./es  # Ruta relativa a la carpeta raíz de tu repositorio
+          publish_dir: ./es  
